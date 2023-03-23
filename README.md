@@ -6,7 +6,7 @@
 
 > The last screenshot tool you will ever use - I promise.
 
-[Pawxel](https://pawxel.rocks) is a and free open-source screenshot tool heavily inspired by [Shottr](https://shottr.cc), with a focus on design and simplicity.
+[Pawxel](https://pawxel.rocks) is a free and open-source screenshot tool heavily inspired by [Shottr](https://shottr.cc) with a focus on design and simplicity.
 
 A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
 
