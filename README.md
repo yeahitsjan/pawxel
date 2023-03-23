@@ -4,7 +4,7 @@
 
 ![screenshot](https://pawxel.rocks/static/poster2.png)
 
-> The last screenshot tool you will use - I promise.
+> The last screenshot tool you will ever use - I promise.
 
 [Pawxel](https://pawxel.rocks) is a and free open-source screenshot tool heavily inspired by [Shottr](https://shottr.cc), with a focus on design and simplicity.
 
@@ -19,9 +19,13 @@ There is not much documentation as of now, but I try to build some in the coming
 - GPU-accelerated editor (if enabled in preferences)
 - Infinite zoom viewport
 
+...and there is still more to come!
+
 To view a full list of what's working and what's not working during beta, you can visit [the changelog](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/changelog.md).
 
 ## How to build
+
+> ***NOTE**: Pawxel only runs on Windows & Linux. Because it is inspired by Shottr, I recommend that for using on macOS. Actively tested on Windows 10, Windows 11 and Debian-based Linux distros (Linux Mint & Ubuntu). Although unsupported it should easily run on Windows 8.x and other Linux distros.*
 
 To build Pawxel you'll need some dependencies first:
 
