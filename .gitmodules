@@ -1,0 +1,22 @@
+[submodule "modules/phantomstyle"]
+	path = modules/phantomstyle
+	url = https://github.com/yeahitsjan/phantomstyle.git
+[submodule "modules/easyloggingpp"]
+	path = modules/easyloggingpp
+	url = https://github.com/yeahitsjan/easyloggingpp.git
+[submodule "modules/SingleApplication"]
+	path = modules/SingleApplication
+	url = https://github.com/yeahitsjan/SingleApplication.git
+[submodule "modules/QHotkey"]
+	path = modules/QHotkey
+	url = https://github.com/yeahitsjan/QHotkey.git
+[submodule "modules/resizer-item"]
+	path = modules/resizer-item
+	url = https://github.com/yeahitsjan/resizer-item.git
+[submodule "modules/FHNotifier"]
+	path = modules/FHNotifier
+	url = https://github.com/yeahitsjan/FHNotifier.git
+[submodule "modules/framelesshelper"]
+	path = modules/framelesshelper
+	url = https://github.com/yeahitsjan/framelesshelper.git
+    branch = qmake_mods

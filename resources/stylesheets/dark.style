@@ -1,0 +1,306 @@
+QStackedWidget {
+    background-color: rgb(48, 48, 48);
+    border-top: 1px solid rgb(28, 28, 28);
+}
+
+QColorDialog {
+    background-color: rgb(48, 48, 48);
+}
+
+QFontDialog {
+    background-color: rgb(48, 48, 48);
+}
+
+QListView {
+    background-color: rgb(38, 38, 38);
+    color: rgb(197, 197, 197);
+}
+
+QScrollBar::vertical {
+    border: none;
+    background: rgb(22, 22, 22);
+    width: 3px;
+}
+
+QPushButton {
+    background-color: rgb(48, 48, 48);
+    color: rgb(197, 197, 197);
+}
+
+QGroupBox {
+    color: rgb(197, 197, 197);
+    border: 2px solid rgb(38, 38, 38);
+    padding: 4px;
+}
+
+QGraphicsView {
+    border: none;
+}
+
+QToolBar {
+    background-color: transparent;
+}
+
+QLabel {
+    border-radius: 4px;
+    color: rgb(197, 197, 197);
+}
+
+QSlider {
+    background: rgb(43, 43, 43);
+    color: rgb(254, 254, 254);
+    border: 0.1em;
+    height: 1.5em;
+    border-left: 2px solid rgb(33, 33, 33);
+}
+
+QSlider::handle:horizontal {
+    height: 0.5em;
+    border: 4px solid rgb(26, 26, 26);
+    border-color: rgb(26, 26, 26);
+    background: rgb(26, 26, 26);
+    margin: 6px;
+}
+
+QSlider::groove:horizontal {
+    height: 0 -0.7em;
+}
+
+QLineEdit {
+    background-color: rgb(43, 43, 43);
+    color: rgb(197, 197, 197);
+    border: none;
+    border-right: 2px solid rgb(33, 33, 33);
+}
+
+QComboBox {
+    background-color: rgb(34, 34, 34);
+    color: rgb(197, 197, 197);
+    border: none;
+}
+
+QCheckBox {
+    background-color: rgb(34, 34, 34);
+    background: transparent;
+    color: rgb(197, 197, 197);
+    border: none;
+}
+
+QRadioButton {
+    background-color: rgb(34, 34, 34);
+    background: transparent;
+    color: rgb(197, 197, 197);
+    border: none;
+}
+
+QScrollArea {
+    border: none;
+    background-color: rgb(43, 43, 43);
+}
+
+#TitleBar {
+    background: transparent;
+}
+
+#TitleBar:hover {
+    background-color: rgba(0, 0, 0, 100);
+}
+
+#RTLButton {
+    background-color: none;
+    color: rgb(197, 197, 197);
+    border: none;
+    border-left: 2px solid rgb(33, 33, 33);
+    padding: 4px;
+}
+
+#RTLButton:hover {
+    background-color: rgba(255, 255, 255, 25);
+}
+
+#ActionBar {
+    background-color: rgb(34, 34, 34);
+    border: 1px solid rgb(26, 26, 26);
+}
+
+#BottomBar {
+    padding: 6px;
+}
+
+#BottomBar:separator {
+    background: transparent;
+}
+
+#AppNameLabel {
+    padding: 6px;
+    border: none;
+    color: rgb(197, 197, 197);
+}
+
+#ActionButtons {
+    /*border-radius: 2px;*/
+    padding: 4px;
+    border: none;
+    color: rgb(197, 197, 197);
+    background-color: none;
+}
+
+#ActionButtons:menu-indicator {
+    image: none;
+    width: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#ActionButtons:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: lightgray;
+}
+
+#ActionButtons:pressed {
+    background-color: rgba(125, 125, 125, 125);
+    color: white;
+}
+
+#ActionButtons:disabled {
+    color: rgb(125, 125, 125);
+}
+
+#InfoWidget_Label {
+    color: rgb(197, 197, 197);
+}
+
+#InfoWidget_Descr {
+    color: rgb(126, 126, 126);
+}
+
+#WindowButtons {
+    border-radius: none;
+    padding: 4px;
+    border: none;
+    color: rgb(197, 197, 197);
+    background-color: none;
+}
+
+#WindowButtons:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: darkgray;
+}
+
+#WindowButtons:pressed {
+    background-color: rgba(125, 125, 125, 125);
+    color: white;
+}
+
+#PreferencesHeader {
+    background-color: rgb(34, 34, 34);
+}
+
+#PreferencesButton {
+    /*border-radius: 1px solid rgba(212, 212, 212, 125);*/
+    border-radius: 4px;
+    padding: 7px;
+    color: rgb(204, 204, 204);
+    background-color: none;
+}
+
+#PreferencesButton:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: lightgray;
+    /*border: 1px solid rgb(235, 135, 0);*/
+}
+
+#PreferencesButton:pressed {
+    background-color: rgba(125, 125, 125, 125);
+    border: 1px solid rgb(125, 125, 125);
+    color: rgb(70, 70, 70);
+}
+
+/* todo: checked */
+
+#PreviewWindow {
+    background-color: rgb(34, 34, 34);
+}
+
+#PreviewActionButton {
+    /*border-radius: 1px solid rgba(212, 212, 212, 125);*/
+    border-radius: 2px;
+    padding: 4px;
+    color: rgb(204, 204, 204);
+    background-color: none;
+}
+
+#PreviewActionButton:hover {
+    background-color: rgba(200, 200, 200, 125);
+    color: lightgray;
+    /*border: 1px solid rgb(235, 135, 0);*/
+}
+
+#PreviewActionButton:pressed {
+    background-color: rgba(165, 165, 165, 125);
+    /*border: 1px solid rgb(125, 125, 125);*/
+    color: rgb(70, 70, 70);
+}
+
+#ItemEditor {
+    background-color: rgb(43, 43, 43);
+}
+
+#TextEditor {
+    background-color: rgb(43, 43, 43);
+}
+
+#AboutWindow {
+    background-color: rgb(34, 34, 34);
+}
+
+#VersionLabel {
+    color: rgb(197, 197, 197);
+}
+
+#LicenseTextBrowser {
+    background-color: rgb(34, 34, 34);
+    border: none;
+    color: rgb(197, 197, 197);
+}
+
+/* FHNotifier related */
+#FHNotifierTitleBar {
+    background-color: rgba(0, 0, 0, 100);
+}
+
+#FHNotifierCloseButton {
+    border-radius: none;
+    padding: 4px;
+    border: none;
+    color: rgb(197, 197, 197);
+    background-color: none;
+}
+
+#FHNotifierCloseButton:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: darkgray;
+}
+
+#FHNotifierCloseButton:pressed {
+    background-color: rgba(125, 125, 125, 125);
+    color: white;
+}
+
+#FHNotifierDecisionButton {
+    padding: 4px;
+    border: none;
+    color: rgb(197, 197, 197);
+    background-color: rgba(197, 197, 197, 100);
+}
+
+#FHNotifierDecisionButton:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: darkgray;
+}
+
+#FHNotifierIconButton {
+    border: none;
+    background: none;
+    background-color: none;
+}

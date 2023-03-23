@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/stylesheets/light.style</file>
+        <file>resources/stylesheets/dark.style</file>
+        <file>resources/icons/action-bar/Font_logo_36x128.svg</file>
+        <file>resources/icons/action-bar/Font_logo_38x128.svg</file>
+        <file>resources/icons/action-bar/MaterialIconsOutlined-Regular.otf</file>
+        <file>resources/icons/action-bar/beta_systray_icon.svg</file>
+        <file>resources/fonts/JosefinSans-Bold.ttf</file>
+        <file>resources/fonts/JosefinSans-SemiBold.ttf</file>
+        <file>resources/fonts/JosefinSans-Regular.ttf</file>
+        <file>resources/fonts/JosefinSans-Light.ttf</file>
+        <file>resources/texts/licensebrowser.txt</file>
+        <file>resources/default_preferences.ini</file>
+        <file>resources/icons/icon_default.png</file>
+        <file>resources/icons/icon_default.svg</file>
+        <file>resources/debug.conf</file>
+        <file>resources/icons/icon_nightly.svg</file>
+        <file>resources/default_preferences_nightly.ini</file>
+    </qresource>
+    <qresource prefix="/emojis">
+        <file>resources/icons/openmoji/1F4A5.svg</file>
+        <file>resources/icons/openmoji/1F4A9.svg</file>
+        <file>resources/icons/openmoji/1F4AD.svg</file>
+        <file>resources/icons/openmoji/1F5EF.svg</file>
+        <file>resources/icons/openmoji/1F44D.svg</file>
+        <file>resources/icons/openmoji/1F44E.svg</file>
+        <file>resources/icons/openmoji/1F60D.svg</file>
+        <file>resources/icons/openmoji/1F61C.svg</file>
+        <file>resources/icons/openmoji/1F92F.svg</file>
+        <file>resources/icons/openmoji/1F408.svg</file>
+        <file>resources/icons/openmoji/1F449.svg</file>
+        <file>resources/icons/openmoji/1F600.svg</file>
+        <file>resources/icons/openmoji/1F602.svg</file>
+        <file>resources/icons/openmoji/1F604.svg</file>
+        <file>resources/icons/openmoji/1F606.svg</file>
+        <file>resources/icons/openmoji/1F609.svg</file>
+        <file>resources/icons/openmoji/1F615.svg</file>
+        <file>resources/icons/openmoji/1F641.svg</file>
+        <file>resources/icons/openmoji/1F642.svg</file>
+        <file>resources/icons/openmoji/1F914.svg</file>
+        <file>resources/icons/openmoji/1F916.svg</file>
+        <file>resources/icons/openmoji/1F973.svg</file>
+        <file>resources/icons/openmoji/1F984.svg</file>
+        <file>resources/icons/openmoji/2764.svg</file>
+    </qresource>
+</RCC>

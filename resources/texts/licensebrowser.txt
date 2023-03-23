@@ -1,0 +1,18 @@
+<style>
+    a {
+        color: rgb(137, 156, 240);
+    }
+</style>
+Pawxel is copyright (c) 2023 by Jan Kowalewicz.
+<br><br>
+If you want you can <a href="https://www.buymeacoffee.com/pawxel">buy me a coffee</a>, help developing Pawxel and supporting aid agencies across the globe. You stumble upon any bugs? Report them <a href="https://github.com/yeahitsjan/pwx-rel/issues">here.</a>
+<br><br>
+Pawxel uses a variety of open-source libraries. A huge thank you to:
+<ul>
+    <li><b>Qt</b> by <a href="https://qt.io">The Qt Company</a></li>
+    <li><b>FramelessHelper</b> by <a href="https://github.com/wangwenx190/framelesshelper">Yuhang Zhao</a></li>
+    <li><b>SingleApplication</b> by <a href="https://github.com/itay-grudev/SingleApplication">Itay Grudev</a></li>
+    <li><b>Phantom</b> by <a href="https://github.com/randrew/phantomstyle">Andrew Richards</a></li>
+    <li><b>easylogging++</b> by <a href="https://github.com/abumusamq">abumusamq</a></li>
+    <li><b>Pawxel's logo</b> by Johanna Strumpen</li>
+</ul>
