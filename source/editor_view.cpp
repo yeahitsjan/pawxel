@@ -419,10 +419,6 @@ const QPixmap EditorView::renderScene() {
 }
 
 void EditorView::gotPix(QPixmap _pix) {
-    // TODO: After we got another new pixmap, the scene rect is probably not resetting back
-    // to 0,0. This result in a bad output when saving to disk. I assume it can be fixed
-    // like here: https://stackoverflow.com/questions/34449357/qgraphicssceneclear-doesnt-change-scenerect
-    // Investigate this!
     this->scene()->clear();
     m_pix = _pix;
     //m_pixItem = this->scene()->addPixmap(m_pix.scaled(this->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));

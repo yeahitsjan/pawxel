@@ -411,7 +411,6 @@ void EditorWindow::onNewPix(QPixmap _pix) {
             PwxApp->desktop()->availableGeometry()
         ));
     }
-    // todo: delete old picture from scene on close!
     if (m_editorView)
         emit sendToEditor(_pix);
 }

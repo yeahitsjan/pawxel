@@ -61,8 +61,6 @@ void SnipArea::paintEvent(QPaintEvent *ev) {
         p.setClipRegion(QRegion(QRect(QPoint(), this->size())).subtracted(QRegion(m_capArea)));
     }
 
-    // 0.0.2-beta: The region itself is drawn differently on Linux by cairo. It makes the screenshot
-    // look darker and also renders the border we draw. Let's invert that on linux.
 #if defined(Q_OS_WIN)
     QColor _alphamin(0, 0, 0, 1);
     QColor _p2brush(0, 0, 0, 35);

@@ -18,9 +18,9 @@ AboutWindow::AboutWindow(QColor _accentColor, bool _isDarkMode, QWidget *parent)
     this->setFont(QFont(APP_FONT, APP_FONT_SIZE));
 #if defined(Q_OS_LINUX)
     this->setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);
-    this->setFixedSize(QSize(330, 410));
+    this->setFixedSize(QSize(330, 430));
 #else
-    this->setFixedSize(QSize(330, 450));
+    this->setFixedSize(QSize(330, 470));
 #endif
     // Move window to center of screen.
     QRect desktopRect = PwxApp->desktop()->availableGeometry(this);
