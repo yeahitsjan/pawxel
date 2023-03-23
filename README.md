@@ -19,7 +19,7 @@ There is not much documentation as of now, but I try to build some in the coming
 - GPU-accelerated editor (if enabled in preferences)
 - Infinite zoom viewport
 
-To view a full list of what's working and what's not working during beta, you can visit [the changelog](hhttps://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/changelog.md).
+To view a full list of what's working and what's not working during beta, you can visit [the changelog](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/changelog.md).
 
 ## How to build
 
