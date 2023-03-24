@@ -3,13 +3,15 @@
         color: rgb(137, 156, 240);
     }
 </style>
+<div align="center">
 Pawxel is copyright (c) 2023 by Jan Kowalewicz.
-<br>
+<br><br>
 Licensed under the terms of the GNU GPLv3.
 <br><br>
 If you want you can <a href="https://www.buymeacoffee.com/pawxel">buy me a coffee</a>, help developing Pawxel and supporting aid agencies across the globe. You stumble upon any bugs? Report them <a href="https://github.com/yeahitsjan/pawxel/issues">here.</a>
+</div>
 <br><br>
-Pawxel uses a variety of open-source libraries. A huge thank you to:
+Pawxel itself is open-source and uses a variety of open-source libraries. A huge thank you to:
 <ul>
     <li><b>Qt</b> by <a href="https://qt.io">The Qt Company</a></li>
     <li><b>FramelessHelper</b> by <a href="https://github.com/wangwenx190/framelesshelper">Yuhang Zhao</a></li>
