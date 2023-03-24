@@ -185,7 +185,10 @@ QScrollArea {
     color: rgb(70, 70, 70);
 }
 
-/* todo: checked */
+#PreferencesButton:checked {
+    background-color: rgba(125, 125, 125, 125);
+    color: black;
+}
 
 #PreviewWindow {
     background-color: rgb(254, 254, 254);

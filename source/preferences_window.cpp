@@ -58,11 +58,11 @@ PreferencesWindow::PreferencesWindow(QColor _accentColor, bool _isDarkMode, QWid
 
         m_lTabBtns.append( m_generalBtn = new QPushButton(GENERAL_CODEPOINT, this) );
         m_lTabBtns.append( m_hotkeysBtn = new QPushButton(HOTKEYS_CODEPOINT, this) );
-        // TODO: add icons to btn
         foreach (QPushButton *_btn, m_lTabBtns) {
             _btn->setFont(QFont("Material Icons Outlined", 20));
             _btn->setObjectName("PreferencesButton");
             _btn->setFixedSize(QSize(72, 52));
+            _btn->setCheckable(true);
         }
         m_tabBtnLayout->addWidget(m_generalBtn);
         m_tabBtnLayout->addWidget(m_hotkeysBtn);
@@ -80,13 +80,22 @@ PreferencesWindow::PreferencesWindow(QColor _accentColor, bool _isDarkMode, QWid
     {
         m_stack->addWidget(this->createGeneralPage());
         connect(m_generalBtn, &QPushButton::clicked, this, [=]() {
+            m_generalBtn->setChecked(true);
+            m_hotkeysBtn->setChecked(false);
+            // --
             m_stack->setCurrentIndex(0);
         });
         m_stack->addWidget(this->createHotkeyPage());
         connect(m_hotkeysBtn, &QPushButton::clicked, this, [=]() {
+            m_hotkeysBtn->setChecked(true);
+            m_generalBtn->setChecked(false);
+            // --
             m_stack->setCurrentIndex(1);
         });
     }
+    // On load index is always 0, set general button in checked state.
+    m_generalBtn->setChecked(true);
+    
     m_windowLayout->addWidget(m_stack);
 
     this->setLayout(m_windowLayout);
