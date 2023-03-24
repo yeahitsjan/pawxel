@@ -1,19 +1,25 @@
-# Pawxel <img src="https://pawxel.rocks/static/icon_512.png" width="28" height="28" align="center">
+<p align="center">
+  <a href="https://pawxel.rocks">
+    <img height="64" width="64" src="https://pawxel.rocks/static/icon_512.png">
+  </a>
+  <h1 align="center">pawxel<i> - a screenshot tool</i></h1>
+</p>
 
-![status](https://img.shields.io/badge/status-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/5.14.x-blue?style=flat-square&logo=qt)
-
-![screenshot](https://pawxel.rocks/static/poster2.png)
+![status](https://img.shields.io/badge/status-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/5.14.x-blue?style=flat-square&logo=qt) ![license](https://img.shields.io/github/license/yeahitsjan/pawxel.svg?style=flat-square) ![downloads](https://img.shields.io/github/downloads/yeahitsjan/pawxel/total.svg?style=flat-square)
 
 > The last screenshot tool you will ever use - I promise.
 
+![screenshot](https://pawxel.rocks/static/poster2.png)
+
 [Pawxel](https://pawxel.rocks) is a free and open-source screenshot tool heavily inspired by [Shottr](https://shottr.cc) with a focus on design and simplicity.
 
-A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
+A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version of Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
 
 There is not much documentation as of now, but I try to build some in the coming months. Still there are [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you getting started.
 
 ## Features
 
+- Rectangle, Circle, Marker and Text items
 - Pixel Distance Measurement
 - Copy color under cursor
 - Autosave to folder
@@ -27,14 +33,14 @@ To view a full list of what's working and what's not working during beta, you ca
 
 ## How to build
 
-> ***NOTE**: Pawxel only runs on Windows & Linux. Because it is inspired by Shottr, I recommend that for using on macOS. Actively tested on Windows 10, Windows 11 and Debian-based Linux distros (Linux Mint & Ubuntu). Although unsupported it should easily run on Windows 8.x and other Linux distros.*
+> ***NOTE**: Pawxel only runs on Windows & Linux. Because it is inspired by Shottr, I recommend that for using on macOS. Actively tested on Windows 10, Windows 11 and Debian-based Linux distros (Linux Mint & Ubuntu). Although untested it should easily run on Windows 8.x and other Linux distros.*
 
 To build Pawxel you'll need some dependencies first:
 
-- [Qt 5.14.x](https://download.qt.io/archive/qt/5.14/)
+- [Qt 5.14.x](https://download.qt.io/archive/qt/5.14/) ([FramelessHelper](https://github.com/wangwenx190/framelesshelper)'s minimum tested version is 5.14, don't expect it to work below that)
 - [Git](https://git-scm.com)
-- *on Windows* MinGW64 (which comes with the installer of Qt)
-- *on Linux* gcc, make (``build-essential`` on debian for example)
+- *on Windows:* MinGW64 (which comes with the installer of Qt)
+- *on Linux:* gcc, g++, make (``build-essential`` on debian for example)
 
 Clone the repo and it's submodules:
 
@@ -58,7 +64,7 @@ Some tasks before you create your report:
    - The version of Pawxel you are using (e.g. v0.0.1).
    - **if on Linux**, if you either use X11 or Wayland (you can run ``$ echo XDG_SESSION_TYPE`` in a terminal for more informations)
    - The output log of the [Debug mode](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md#debug-mode) *(not necessary, but would be nice to have)*
-3. Please give us a detailed information about how to reproduce the issue you encounter. You can support that by adding pictures (or screenshots) and screen recordings.
+3. Please give us detailed information about how to reproduce the issue you encounter. You can support that by adding pictures (or screenshots) and screen recordings.
 
 From there on your report will be triaged and you get a response as quickly as possible.
 
