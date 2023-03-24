@@ -7,12 +7,9 @@
 
 ![status](https://img.shields.io/badge/status-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/5.14.x-blue?style=flat-square&logo=qt) ![license](https://img.shields.io/github/license/yeahitsjan/pawxel.svg?style=flat-square) ![downloads](https://img.shields.io/github/downloads/yeahitsjan/pawxel/total.svg?style=flat-square)
 
-> The last screenshot tool you will ever use - I promise.
-
-![screenshot](https://pawxel.rocks/static/poster2.png)
-
 [Pawxel](https://pawxel.rocks) is a free and open-source screenshot tool heavily inspired by [Shottr](https://shottr.cc) with a focus on design and simplicity.
 
+![screenshot](https://raw.githubusercontent.com/yeahitsjan/pawxel/develop/.github/screenshots/screenshot-bg.png)
 A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version of Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
 
 There is not much documentation as of now, but I try to build some in the coming months. Still there are [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you getting started.
