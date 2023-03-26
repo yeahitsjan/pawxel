@@ -221,7 +221,12 @@ void PawxelApp::onRestoreCaptureRequested() {
 }
 
 void PawxelApp::onShotSelectionRequested(QList<QPixmap> _lPixs) {
-    LOG(DEBUG) << "(application:onShotSelectionRequested)";
+    LOG(DEBUG) << "(application:onShotSelectionRequested) SelectWindow requested";
+    if (!m_selectionWindow)
+        m_selectionWindow = new SelectWindow(m_shouldAppsUseDarkMode);
+    //connect(this, &PawxelApp::feedSelectionWindow, m_selectionWindow, &SelectWindow::onMultiPixmaps, Qt::UniqueConnection);
+    m_selectionWindow->show();
+    //emit feedSelectionWindow(_lPixs);
 }
 
 void PawxelApp::onFullscreenShotRequested() {

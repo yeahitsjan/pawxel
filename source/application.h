@@ -24,6 +24,7 @@
 #include "systray.h"
 #include "sniparea.h"
 #include "preview_window.h"
+#include "select_window.h"
 #include "editor_window.h"
 #include "preferences.h"
 #include "preferences_window.h"
@@ -45,6 +46,7 @@ protected:
     QPointer<SysTray> m_sysTray;
     QPointer<SnipArea> m_snipArea;
     QPointer<LittlePreviewWindow> m_previewWindow;
+    QPointer<SelectWindow> m_selectionWindow;
     QPointer<EditorWindow> m_shotEditor;
     
     QPointer<PreferencesWindow> m_prefsWindow;

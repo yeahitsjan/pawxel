@@ -20,7 +20,8 @@ SOURCES += source/application.cpp \
             source/systray.cpp \
             source/about_window.cpp \
             source/qt_flowlayout.cpp \
-            source/emoji_widget.cpp
+            source/emoji_widget.cpp \
+            source/select_window.cpp
 
 HEADERS += source/platform.h \
             source/application.h \
@@ -34,7 +35,8 @@ HEADERS += source/platform.h \
             source/systray.h \
             source/about_window.h \
             source/qt_flowlayout.h \
-            source/emoji_widget.h
+            source/emoji_widget.h \
+            source/select_window.h
 
 ## Submodules
 # Easylogging++
