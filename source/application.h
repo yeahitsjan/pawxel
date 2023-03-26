@@ -73,6 +73,9 @@ public slots:
     void onHoldLastCapture(QPixmap _pix);
     void onRestoreCaptureRequested();
 
+    // Slots related to choose a screenshot.
+    void onShotSelectionRequested(QList<QPixmap> _lPixs);
+
     // Slots related to create a screenshot.
     void onFullscreenShotRequested();
     void onSnipAreaRequested();
@@ -99,6 +102,7 @@ public slots:
 signals:
     // Emitted when fullscreen screenshot was captured.
     void fullScreenCaptureFinished(QPixmap _pix);
+    void multiFullScreenCaptureFinished(QList<QPixmap> m_lPixs);
 
     // Signals to send to the screenshot-related windows.
     void feedPreviewWindow(QPixmap _pix);

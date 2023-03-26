@@ -24,6 +24,7 @@
 #include <QFileDialog>
 
 #include <QDesktopWidget>
+#include <QScreen>
 
 PawxelApp::PawxelApp(int &argc, char **argv) : SingleApplication(argc, argv) {
     LOG(INFO) << "Pawxel started";
@@ -219,13 +220,34 @@ void PawxelApp::onRestoreCaptureRequested() {
     }
 }
 
+void PawxelApp::onShotSelectionRequested(QList<QPixmap> _lPixs) {
+    LOG(DEBUG) << "(application:onShotSelectionRequested)";
+}
+
 void PawxelApp::onFullscreenShotRequested() {
     // Skip the preview window.
     connect(this, &PawxelApp::fullScreenCaptureFinished, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
-    
-    QRect _geom = this->desktop()->screenGeometry();
-    QPixmap _pix = QPixmap::grabWindow(0, _geom.x(), _geom.y(), _geom.width(), _geom.height());
-    emit fullScreenCaptureFinished(_pix);
+    // If we have more than one screen attached, show a selection dialog.
+    connect(this, &PawxelApp::multiFullScreenCaptureFinished, this, &PawxelApp::onShotSelectionRequested, Qt::UniqueConnection);
+
+    QList<QPixmap> _lScreens;
+    if (this->screens().size() > 0) {
+        LOG(DEBUG) << "(application:onFullscreenShotRequested) More than screen attached.";
+        for (int i = 0; i < this->screens().size(); i++) {
+            auto _scr = this->screens().at(i);
+            auto _scrRect = _scr->availableGeometry();
+            _lScreens.append(_scr->grabWindow(0, _scrRect.x(), _scrRect.y(), _scrRect.width(), _scrRect.height()));
+        }
+        // + combined
+        QRect _geom = this->desktop()->geometry();
+        _lScreens.append(QPixmap::grabWindow(0, _geom.x(), _geom.y(), _geom.width(), _geom.height()));
+        emit multiFullScreenCaptureFinished(_lScreens);
+    } else {
+        QRect _geom = this->desktop()->screenGeometry();
+        QPixmap _pix = QPixmap::grabWindow(0, _geom.x(), _geom.y(), _geom.width(), _geom.height());
+        emit fullScreenCaptureFinished(_pix);
+    }
+    _lScreens.clear();
 }
 
 void PawxelApp::onSnipAreaRequested() {
