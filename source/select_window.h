@@ -30,6 +30,9 @@ private:
 
 public slots:
     void onMultiPixmaps(QList<QPixmap> _lPixs);
+
+signals:
+    void userSelectedScreen(QPixmap _pix);
 };
 
 } // namespace

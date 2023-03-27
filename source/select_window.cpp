@@ -34,12 +34,16 @@ void SelectWindow::onMultiPixmaps(QList<QPixmap> _lPixs) {
         QPixmap _pix = _lPixs.at(i);
         QPushButton *_btn = new QPushButton;
         {
-            _btn->setObjectName("ActionButtons");
+            _btn->setObjectName("SelectButtons");
             _btn->setFixedSize(QSize(198, 198));
             _btn->setIconSize(QSize(_pix.width() / 12, _pix.height() / 12)); // todo: refine this
+            //_btn->setIconSize(_pix.rect().size());
             _btn->setIcon(QIcon(_pix));
         }
-        connect(_btn, &QPushButton::clicked, [this, _pix] { /* todo */ });
+        connect(_btn, &QPushButton::clicked, [this, _pix] { 
+            emit userSelectedScreen(_pix);
+            this->close();
+        });
         m_windowLayout->addWidget(_btn);
     }
 }

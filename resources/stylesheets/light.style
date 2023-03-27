@@ -135,6 +135,24 @@ QScrollArea {
     color: rgb(197, 197, 197);
 }
 
+#SelectButtons {
+    /*border-radius: 2px;*/
+    padding: 4px;
+    border: none;
+    color: rgb(43, 43, 43);
+    background-color: none;
+}
+
+#SelectButtons:hover {
+    background-color: rgba(225, 225, 225, 80);
+    color: darkgray;
+}
+
+#SelectButtons:pressed {
+    background-color: rgba(125, 125, 125, 125);
+    color: black;
+}
+
 #InfoWidget_Label {
     color: rgb(0, 0, 0);
 }

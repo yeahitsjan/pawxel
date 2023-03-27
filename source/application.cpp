@@ -226,6 +226,7 @@ void PawxelApp::onShotSelectionRequested(QList<QPixmap> _lPixs) {
         m_selectionWindow = new SelectWindow(m_shouldAppsUseDarkMode);
     m_selectionWindow->setObjectName("PreviewWindow"); // same styling
     connect(this, &PawxelApp::feedSelectWindow, m_selectionWindow, &SelectWindow::onMultiPixmaps, Qt::UniqueConnection);
+    connect(m_selectionWindow, &SelectWindow::userSelectedScreen, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
     m_selectionWindow->show();
     emit feedSelectWindow(_lPixs);
 }
@@ -241,7 +242,7 @@ void PawxelApp::onFullscreenShotRequested() {
         LOG(DEBUG) << "(application:onFullscreenShotRequested) More than screen attached.";
         for (int i = 0; i < this->screens().size(); i++) {
             auto _scr = this->screens().at(i);
-            auto _scrRect = _scr->geometry();
+            //auto _scrRect = _scr->geometry();
             _lScreens.append(_scr->grabWindow(0));
         }
         // + combined
