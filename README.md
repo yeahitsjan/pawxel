@@ -12,7 +12,7 @@
 ![screenshot](https://raw.githubusercontent.com/yeahitsjan/pawxel/develop/.github/screenshots/screenshot-bg.png)
 A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version of Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
 
-There is not much documentation as of now, but I try to build some in the coming months. Still there are [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you getting started.
+To get started you can view a [gentle overview](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/overview.md) on Pawxel's UI. There are also [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you out in different situations
 
 ## Features
 
@@ -64,6 +64,17 @@ Some tasks before you create your report:
 3. Please give us detailed information about how to reproduce the issue you encounter. You can support that by adding pictures (or screenshots) and screen recordings.
 
 From there on your report will be triaged and you get a response as quickly as possible.
+
+## Thank you letter! :heart:
+
+Pawxel uses a variety of open-source libraries. To mention them we link them in this part of the README.
+
+- [FramelessHelper](https://github.com/wangwenx190/framelesshelper): an awesome cross-platform window customization framework which builds on top of Qt - is used to achieve a true frameless window on all platforms
+- [SingleApplication](https://github.com/itay-grudev/SingleApplication): Pawxel is a single instance application - this library helps achieving that.
+- [phantomstyle](https://github.com/randrew/phantomstyle): cross-platform style for Qt5 and Qt6 which I use since I started working with Qt
+- [QHotkey](https://github.com/Skycoder42/QHotkey): every time you press your hotkey, QHotkey is used to send the signal to the application instance
+- [resizer-item](https://github.com/cl0ne/resizer-item): an awesome reference which has been forked and extended to allow resizing items in a QGraphicsView
+- [easylogging++](https://github.com/amrayn/easyloggingpp): logging library which can be used together with Qt
 
 ## License
 

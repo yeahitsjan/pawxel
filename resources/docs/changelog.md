@@ -45,7 +45,7 @@
 :rocket: Features / Improvements:
 - **Emojis**
   - Emojis are now available; In the future you will be able to add your own emojis in a custom library. Currently there is only a selected amount of emojis, besides the possibility to add own in the future, there will be some more from time to time :smile:
-  - Currently Emojis aren't scalable. You can add, move and delete them but you will not be able to get a resize handle. The item needs a reimplementation which you can track down [here](https://github.com/yeahitsjan/pwx-rel/issues/8).
+  - Currently Emojis aren't scalable. You can add, move and delete them but you will not be able to get a resize handle. The item needs a reimplementation which you can track down [here](https://github.com/yeahitsjan/pawxel/issues/3).
 - **Autostart**
   - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows); *Linux still WIP! (expected 0.1.x)*
   - You can now enable / disable autostart using the Preferences dialog
@@ -133,17 +133,17 @@ Disabled features:
 - **Emoji's**
   - I couldn't implement a good and stylish way to display emoji's in a list. Instead of just pushing out the bad idea's I had until today, I will work on that during the beta phase.
 - **Window movement on Linux**
-  - Window movement currently seems broken on Linux. This could be not directly related to Pawxel. Take a look into [this issue (#7)](https://github.com/yeahitsjan/pwx-rel/issues/7) for more informations. Currently you are not able to move the editor window.
+  - Window movement currently seems broken on Linux. This could be not directly related to Pawxel. Take a look into [this issue (#4)](https://github.com/yeahitsjan/pawxel/issues/4) for more informations. Currently you are not able to move the editor window.
 - **Version check**
   - As already told in the [FAQ](https://pawxel.rocks/faq.html), Pawxel isn't checking for newer versions in beta / nightly versions. The feature isn't even implemented yet and not a priority as of now.
 
 Known Bugs:
 - **Snip Area is not fullscreen after display change**
   - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux)
-  - The sniparea does not get resized at the moment if you change your displays at runtime (ex. Windows display settings). This only affects the applications tray mode, as the application isn't restarted. Issue is [already open (#4)](https://github.com/yeahitsjan/pwx-rel/issues/4).
+  - The sniparea does not get resized at the moment if you change your displays at runtime (ex. Windows display settings). This only affects the applications tray mode, as the application isn't restarted. Issue is [already open (#2)](https://github.com/yeahitsjan/pawxel/issues/2).
 - **No global shortcuts on Wayland**
   - ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux)
-  - It isn't a *bug*, Wayland just disallows global shortcuts. You shouldn't be affected by that on X11. The idea is to implement command line options so Pawxel can be called from there and get an shortcut assigned in Wayland itself. You can discuss that, [here (#3)](https://github.com/yeahitsjan/pwx-rel/issues/3).
+  - It isn't a *bug*, Wayland just disallows global shortcuts. You shouldn't be affected by that on X11. The idea is to implement command line options so Pawxel can be called from there and get an shortcut assigned in Wayland itself. You can discuss that, [here (#1)](https://github.com/yeahitsjan/pawxel/issues/1).
 - **Resize handle does not disappear when clicking into the scene**
   - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux)
   - When resizing an item, the handle isn't disappearing when clicking into the scene. When clicking on another item to resize, the handle bar moves, as expected, to the new item. Also, it isn't rendered when copying or saving the screenshot. So behaviour is correct, hiding should work, but doesn't. The issue is noted (Trello) but not listed on Github.
