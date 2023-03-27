@@ -224,9 +224,10 @@ void PawxelApp::onShotSelectionRequested(QList<QPixmap> _lPixs) {
     LOG(DEBUG) << "(application:onShotSelectionRequested) SelectWindow requested";
     if (!m_selectionWindow)
         m_selectionWindow = new SelectWindow(m_shouldAppsUseDarkMode);
-    //connect(this, &PawxelApp::feedSelectionWindow, m_selectionWindow, &SelectWindow::onMultiPixmaps, Qt::UniqueConnection);
+    m_selectionWindow->setObjectName("PreviewWindow"); // same styling
+    connect(this, &PawxelApp::feedSelectWindow, m_selectionWindow, &SelectWindow::onMultiPixmaps, Qt::UniqueConnection);
     m_selectionWindow->show();
-    //emit feedSelectionWindow(_lPixs);
+    emit feedSelectWindow(_lPixs);
 }
 
 void PawxelApp::onFullscreenShotRequested() {
@@ -241,7 +242,7 @@ void PawxelApp::onFullscreenShotRequested() {
         for (int i = 0; i < this->screens().size(); i++) {
             auto _scr = this->screens().at(i);
             auto _scrRect = _scr->availableGeometry();
-            _lScreens.append(_scr->grabWindow(0, _scrRect.x(), _scrRect.y(), _scrRect.width(), _scrRect.height()));
+            _lScreens.append(_scr->grabWindow(i, _scrRect.x(), _scrRect.y(), _scrRect.width(), _scrRect.height()));
         }
         // + combined
         QRect _geom = this->desktop()->geometry();

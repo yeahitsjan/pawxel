@@ -109,6 +109,7 @@ signals:
     // Signals to send to the screenshot-related windows.
     void feedPreviewWindow(QPixmap _pix);
     void feedEditorWindow(QPixmap _pix);
+    void feedSelectWindow(QList<QPixmap> _lPixs);
     
     // Signals related to restore the capture.
     void restore(QPixmap _pix);

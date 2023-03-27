@@ -5,6 +5,8 @@
 #include "easylogging++.h"
 #include "select_window.h"
 
+#include <QPushButton>
+
 namespace pawxel {
 
 SelectWindow::SelectWindow(bool _isDarkMode, QWidget *parent) : m_isDarkMode(_isDarkMode), FramelessWidget(parent) {
@@ -28,7 +30,18 @@ SelectWindow::~SelectWindow() {
 }
 
 void SelectWindow::onMultiPixmaps(QList<QPixmap> _lPixs) {
-    LOG(DEBUG) << "(select_window:onMultiPixmaps)";
+    for (int i = 0; i < _lPixs.size(); i++) {
+        QPixmap _pix = _lPixs.at(i);
+        QPushButton *_btn = new QPushButton;
+        {
+            _btn->setObjectName("ActionButtons");
+            _btn->setFixedSize(QSize(198, 198));
+            _btn->setIconSize(QSize(_pix.width() / 12, _pix.height() / 12)); // todo: refine this
+            _btn->setIcon(QIcon(_pix));
+        }
+        connect(_btn, &QPushButton::clicked, [this, _pix] { /* todo */ });
+        m_windowLayout->addWidget(_btn);
+    }
 }
 
 } // namespace
