@@ -2,7 +2,7 @@
 // Contact: jan@nitroosit.de; jan.kowalewicz@web.de
 #pragma once
 
-#include <FramelessWidget>
+#include <FramelessDialog>
 #include <QObject>
 #include <QWidget>
 
@@ -16,7 +16,7 @@ FRAMELESSHELPER_USE_NAMESPACE
 
 namespace pawxel {
 
-class SelectWindow : public FramelessWidget {
+class SelectWindow : public FramelessDialog {
     Q_OBJECT
 public:
     explicit SelectWindow(bool _isDarkMode, QWidget *parent = nullptr);

@@ -241,8 +241,8 @@ void PawxelApp::onFullscreenShotRequested() {
         LOG(DEBUG) << "(application:onFullscreenShotRequested) More than screen attached.";
         for (int i = 0; i < this->screens().size(); i++) {
             auto _scr = this->screens().at(i);
-            auto _scrRect = _scr->availableGeometry();
-            _lScreens.append(_scr->grabWindow(i, _scrRect.x(), _scrRect.y(), _scrRect.width(), _scrRect.height()));
+            auto _scrRect = _scr->geometry();
+            _lScreens.append(_scr->grabWindow(0));
         }
         // + combined
         QRect _geom = this->desktop()->geometry();

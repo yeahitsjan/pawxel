@@ -9,7 +9,7 @@
 
 namespace pawxel {
 
-SelectWindow::SelectWindow(bool _isDarkMode, QWidget *parent) : m_isDarkMode(_isDarkMode), FramelessWidget(parent) {
+SelectWindow::SelectWindow(bool _isDarkMode, QWidget *parent) : m_isDarkMode(_isDarkMode), FramelessDialog(parent) {
 #if defined(Q_OS_WINDOWS)
     this->setWindowFlags(Qt::Tool | Qt::WindowStaysOnTopHint);
 #else
