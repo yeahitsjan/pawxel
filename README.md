@@ -12,7 +12,7 @@
 ![screenshot](https://raw.githubusercontent.com/yeahitsjan/pawxel/develop/.github/screenshots/screenshot-bg.png)
 A little screencast is available on the [website](https://pawxel.rocks/). You can grab the latest version of Pawxel from the [releases page](https://github.com/yeahitsjan/pawxel/tags).
 
-To get started you can view a [gentle overview](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/overview.md) on Pawxel's UI. There are also [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you out in different situations
+To get started you can take a look at a [gentle overview](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/overview.md) of Pawxel's UI. There are also [some tips & tricks](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/tips.md) who can help you improve working with Pawxel.
 
 ## Features
 
