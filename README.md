@@ -28,9 +28,13 @@ To get started you can take a look at a [gentle overview](https://github.com/yea
 
 To view a full list of what's working and what's not working during beta, you can visit [the changelog](https://github.com/yeahitsjan/pawxel/blob/develop/resources/docs/changelog.md).
 
-## How to build
+## Installing pawxel
 
-> ***NOTE**: Pawxel only runs on Windows & Linux. Because it is inspired by Shottr, I recommend that for using on macOS. Actively tested on Windows 10, Windows 11 and Debian-based Linux distros (Linux Mint & Ubuntu). Although untested it should easily run on Windows 8.x and other Linux distros.*
+- Archlinux: [`pawxel-git` (AUR)](https://aur.archlinux.org/packages/pawxel-git)
+
+## How to build from source
+
+> _**NOTE**: Pawxel only runs on Windows & Linux. Because it is inspired by Shottr, I recommend that for using on macOS. Actively tested on Windows 10, Windows 11 and Debian-based Linux distros (Linux Mint & Ubuntu). Although untested it should easily run on Windows 8.x and other Linux distros._
 
 To build Pawxel you'll need some dependencies first:
 
