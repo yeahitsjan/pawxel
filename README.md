@@ -34,13 +34,8 @@ To view a full list of what's working and what's not working during beta, you ca
 
 Grab the latest ``.zip`` or ``.tar`` from the [releases page](https://github.com/yeahitsjan/pawxel/releases).
 
-**Windows**
-  
-Run ``pawxel.exe`` inside the extracted archive
-
-**Linux**
-
-You can either run ``pawxel.sh`` or take a look into the ``bin/`` folder to find the executable and run it from there directly.
+- **Windows**: Run ``pawxel.exe`` inside the extracted archive.
+- **Linux**: You can either run ``pawxel.sh`` or take a look into the ``bin/`` folder to find the executable and run it from there directly.
 
 There is also an AUR (archlinux) package available maintained by [@christian-heusel](https://github.com/christian-heusel):
 - [`pawxel-git` (AUR)](https://aur.archlinux.org/packages/pawxel-git)
