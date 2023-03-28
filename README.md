@@ -30,7 +30,7 @@ To view a full list of what's working and what's not working during beta, you ca
 
 ## Install
 
-> Pawxel is only released as an archive. There is no installer or similiar. The tool is and should be lightweight, an installation is not required. The only folder you need to delete after deleting Pawxel from your disk is $HOME/.pawxel.
+> _**NOTE**: Pawxel is only released as an archive. There is no installer or similiar. The tool is and should be lightweight, an installation is not required. The only folder you need to delete after deleting Pawxel from your disk is ``$HOME/.pawxel``._
 
 Grab the latest ``.zip`` or ``.tar`` from the [releases page](https://github.com/yeahitsjan/pawxel/releases).
 
