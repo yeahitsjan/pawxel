@@ -4,6 +4,7 @@
 
 #include <QDesktopWidget>
 #include <QApplication>
+#include <QScreen>
 
 #include <QPainter>
 #include <QPen>
@@ -13,7 +14,8 @@ namespace pawxel {
 
 SnipArea::SnipArea(QWidget *parent) : QWidget(parent) {
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::Tool | Qt::WindowStaysOnTopHint);
-    this->setFixedSize(QDesktopWidget().size());
+    this->setGeometry(QApplication::desktop()->geometry());
+    this->setFixedSize(QApplication::desktop()->size());
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setAttribute(Qt::WA_DeleteOnClose, true);
     this->setCursor(Qt::CrossCursor);
@@ -25,7 +27,9 @@ SnipArea::~SnipArea() {
 void SnipArea::grab(QRect _rect, QPoint _mousePos) {
     QPixmap _shot;
     // TODO: replace grabWindow with QScreen::grabWindow; the problem here is that we still want to have multi-monitor support. Do we?
-    _shot = QPixmap::grabWindow(QApplication::desktop()->winId(), _rect.topLeft().x(), _rect.topLeft().y(), _rect.width(), _rect.height());
+    //_shot = QPixmap::grabWindow(0, _rect.topLeft().x(), _rect.topLeft().y(), _rect.width(), _rect.height());
+    QScreen *_tl = QApplication::screenAt(QPoint(QApplication::desktop()->geometry().x(), QApplication::desktop()->geometry().y()));
+    _shot = _tl->grabWindow(0, _rect.topLeft().x(), _rect.topLeft().y(), _rect.width(), _rect.height());
     // emit snipped -> transfer _shot + QPoint to display LittlePreviewWindow on mouse pos
     emit snipped(_shot, _mousePos);
     this->close();
