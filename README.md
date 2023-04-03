@@ -38,8 +38,9 @@ Grab the latest ``.zip`` or ``.tar`` from the [releases page](https://github.com
 - **Windows**: Run ``pawxel.exe`` inside the extracted archive.
 - **Linux**: You can either run ``pawxel.sh`` or take a look into the ``bin/`` folder to find the executable and run it from there directly.
 
-There is also an AUR (archlinux) package available maintained by [@christian-heusel](https://github.com/christian-heusel):
-- [`pawxel-git` (AUR)](https://aur.archlinux.org/packages/pawxel-git)
+There are also packages on the Arch User Repository available maintained by [@christian-heusel](https://github.com/christian-heusel):
+- [`pawxel`](https://aur.archlinux.org/packages/pawxel): Builds the latest tag
+- [`pawxel-git`](https://aur.archlinux.org/packages/pawxel-git): Builds the development branch
 
 ## How to build from source
 
