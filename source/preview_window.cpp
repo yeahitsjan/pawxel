@@ -85,6 +85,7 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
         m_lActionBtns.append( m_editBtn = new QPushButton("\ue3c9", m_actionBar) );
         connect(m_editBtn, &QPushButton::clicked, [=]() {
             emit userWantsEdit(m_pix);
+            this->close();
         });
         m_actionBar->addWidget(m_editBtn);
 

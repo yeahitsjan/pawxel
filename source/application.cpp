@@ -23,6 +23,7 @@
 #include <QStandardPaths>
 #include <QFileDialog>
 
+#include <QWindow>
 #include <QDesktopWidget>
 #include <QScreen>
 
@@ -288,38 +289,16 @@ void PawxelApp::onPreviewWindowRequested(QPixmap _pix, QPoint _atMousePos) {
     auto _rHeight = PwxApp->desktop()->screenGeometry().height() - 220;
     LOG(DEBUG) << "(application:onPreviewWindowRequested) Window would be displayed at: " << _atMousePos.x() << ", " << _atMousePos.y();
     LOG(DEBUG) << "(application:onPreviewWindowRequested) Available screen size for prev win is: " << _rWidth << ", " << _rHeight;
-    m_previewWindow->move(_atMousePos); // move the preview window to last mouse postion
-    /* If x or y of mouse position is greater than calculated screen size, move the window. */
-    if (_atMousePos.x() >= _rWidth || _atMousePos.y() >= _rHeight) {
-        /* If x of preview window is currently greater than calculated screen size */
-        if (m_previewWindow->pos().x() >= _rWidth) {
-            /* move window back into screen via x, ignoring y */
-            m_previewWindow->move(m_previewWindow->pos().x() - 240, m_previewWindow->pos().y());
-        }
-        /* If y of preview window is currently greater than calculated screen size */
-        if (m_previewWindow->pos().y() >= _rHeight) {
-            /* move window back into screen ignoring x, via y */
-            m_previewWindow->move(m_previewWindow->pos().x(), m_previewWindow->pos().y() - 220);
-        }
-    } else if (_atMousePos.x() < 0 || _atMousePos.y() < 0) {
-        /* If x of preview window is smaller than zero */
-        if (m_previewWindow->pos().x() < 0) {
-            /* Move window back into screen via x, ignoring y */
-            m_previewWindow->move(m_previewWindow->pos().x() + 240, m_previewWindow->pos().y());
-        }
-        /* If y of preview window is smaller than zero */
-        if (m_previewWindow->pos().y() < 0) {
-            /* Move window back into screen ignoring x, via y */
-            m_previewWindow->move(m_previewWindow->pos().x(), m_previewWindow->pos().y() + 220);
-        }
-    }
+    
+    QScreen *_mousePosScr = QApplication::screenAt(_atMousePos);
+    m_previewWindow->windowHandle()->setScreen(_mousePosScr);
+    m_previewWindow->move(_atMousePos); // move the preview window to beginning mouse postion, just like Shottr does it
+    
     LOG(DEBUG) << "(application:onPreviewWindowRequested) Window pos is now: " << m_previewWindow->pos().x() << ", " << m_previewWindow->pos().y();
 }
 
 void PawxelApp::onShotEditorRequested(QPixmap _pix) {
     LOG(DEBUG) << "(application:onShotEditorRequested) ShotEditor requested";
-    if (m_previewWindow)
-        m_previewWindow->hide(); // no close! => https://github.com/wangwenx190/framelesshelper#use
     if (!m_shotEditor)
         m_shotEditor = new EditorWindow(m_autoSave, m_accentColor, m_shouldAppsUseDarkMode);
     connect(this, &PawxelApp::feedEditorWindow, m_shotEditor, &EditorWindow::onNewPix, Qt::UniqueConnection);

@@ -31,7 +31,7 @@ void SnipArea::grab(QRect _rect, QPoint _mousePos) {
     QScreen *_tl = QApplication::screenAt(QPoint(QApplication::desktop()->geometry().x(), QApplication::desktop()->geometry().y()));
     _shot = _tl->grabWindow(0, _rect.topLeft().x(), _rect.topLeft().y(), _rect.width(), _rect.height());
     // emit snipped -> transfer _shot + QPoint to display LittlePreviewWindow on mouse pos
-    emit snipped(_shot, _mousePos);
+    emit snipped(_shot, this->mapToGlobal(m_mdPos));
     this->close();
 }
 
