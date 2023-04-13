@@ -145,6 +145,27 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
 LittlePreviewWindow::~LittlePreviewWindow() {
 }
 
+void LittlePreviewWindow::keyPressEvent(QKeyEvent *ev) {
+    if (ev->modifiers() & Qt::ControlModifier) {
+        if (ev->key() == 0x043) {
+            if (!m_pix.isNull()) {
+                emit copyToClipboard(m_pix);
+                this->close();
+            }
+        } else if (ev->key() == 0x053) {
+            if (!m_pix.isNull()) {
+                if (m_autoSave && !PwxApp->preferences()->screenshotsFolder().startsWith("$EMPTY")) {
+                    emit autoSaveToDisk(m_pix);
+                    this->close();
+                } else {
+                    emit saveToDisk(m_pix);
+                    this->close();
+                }
+            }
+        }
+    }
+}
+
 void LittlePreviewWindow::onNewPix(QPixmap _pix) {
     if (!m_pixPreview)
         LOG(FATAL) << "(preview_window:onNewPix) Picture preview object not existing. That's fatal!"; // this is going to crash the application

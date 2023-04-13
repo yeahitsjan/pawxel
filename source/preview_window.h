@@ -53,6 +53,8 @@ protected:
 
     QPixmap m_pix;
 
+    void keyPressEvent(QKeyEvent *ev) override;
+
 private:
     QPushButton *m_editBtn;
     QPushButton *m_copyBtn;
