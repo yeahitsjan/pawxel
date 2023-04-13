@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.3
+
+*13 April 2023*
+
+![type](https://img.shields.io/badge/type-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/qt-5.14.2-blue?style=flat-square&logo=qt) ![qtver](https://img.shields.io/badge/qt-5.15.2-blue?style=flat-square&logo=qt)
+
+:rocket: Features / Improvements:
+- Fullscreen screenshot with multiple screens
+    - You are now greeted by a selection window if more than one screen is attached
+- Quick shortcuts in Preview Window
+    - You can now press Ctrl+C to copy or Ctrl+S to save inside the small preview window
+
+:bug: Bugfixes:
+- ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Show visually which page in preferences is selected
+
+:spiral_notepad: Known Bugs:
+- [Dual Monitor support not working as expected (#9)](https://github.com/yeahitsjan/pawxel/issues/9)
+    - Currently I work on a [branch](https://github.com/yeahitsjan/pawxel/tree/fix-multi-screen) to fix this, but did not get any feedback yet. I try to get this working as fast as possible.
+
+<hr>
+
 ## 0.1.2
 
 *22 March 2023*
