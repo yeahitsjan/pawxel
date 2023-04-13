@@ -238,7 +238,8 @@ void PawxelApp::onFullscreenShotRequested() {
     connect(this, &PawxelApp::multiFullScreenCaptureFinished, this, &PawxelApp::onShotSelectionRequested, Qt::UniqueConnection);
 
     QList<QPixmap> _lScreens;
-    if (this->screens().size() > 0) {
+    // auto x = this->screens().size(); why does this return 1? IMO a list which contains 1 element should start like an array = 0.
+    if (this->screens().size() > 1) {
         LOG(DEBUG) << "(application:onFullscreenShotRequested) More than screen attached.";
         for (int i = 0; i < this->screens().size(); i++) {
             auto _scr = this->screens().at(i);
