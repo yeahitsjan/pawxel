@@ -5,7 +5,7 @@
 #include "easylogging++.h"
 #include "select_window.h"
 
-#include <QPushButton>
+#include <QToolButton>
 
 namespace pawxel {
 
@@ -32,15 +32,21 @@ SelectWindow::~SelectWindow() {
 void SelectWindow::onMultiPixmaps(QList<QPixmap> _lPixs) {
     for (int i = 0; i < _lPixs.size(); i++) {
         QPixmap _pix = _lPixs.at(i);
-        QPushButton *_btn = new QPushButton;
+        QToolButton *_btn = new QToolButton;
         {
             _btn->setObjectName("SelectButtons");
             _btn->setFixedSize(QSize(198, 198));
             _btn->setIconSize(QSize(_pix.width() / 12, _pix.height() / 12)); // todo: refine this
             //_btn->setIconSize(_pix.rect().size());
+            _btn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
             _btn->setIcon(QIcon(_pix));
+            if (i == _lPixs.size()-1)
+                _btn->setText("Combined");
+            else
+                _btn->setText("Monitor " + QString::number(i+1));
+            _btn->setFont(QFont(APP_FONT_MID, 10));
         }
-        connect(_btn, &QPushButton::clicked, [this, _pix] { 
+        connect(_btn, &QToolButton::clicked, [this, _pix] { 
             emit userSelectedScreen(_pix);
             this->close();
         });
