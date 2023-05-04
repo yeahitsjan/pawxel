@@ -229,9 +229,9 @@ void PawxelApp::onRestoreCaptureRequested() {
         _noLastCapture->setText(tr("There is no recent capture saved. Take a screenshot first."));
         _noLastCapture->setMessageBoxIcon(FHMessageBox::Information);
         {
-            _noLastCapture->titleWidget()->setFont(QFont("Josefin Sans Bold", 9));
-            _noLastCapture->textWidget()->setFont(QFont("Josefin Sans", 9));
-            _noLastCapture->setButtonFont(QFont("Josefin Sans", 9));
+            _noLastCapture->titleWidget()->setFont(QFont(APP_FONT_BOLD, 9));
+            _noLastCapture->textWidget()->setFont(QFont(APP_FONT, 9));
+            _noLastCapture->setButtonFont(QFont(APP_FONT, 9));
         }
         connect(_noLastCapture, &FHMessageBox::firstButtonClicked, this, [=]() {
             _noLastCapture->close();
@@ -375,9 +375,9 @@ void PawxelApp::onPrefChangeRestartRequired() {
     m_restartMsgBox->setText(tr("A restart is required for these changes to take effect."));
     m_restartMsgBox->setMessageBoxIcon(FHMessageBox::Warning);
     {
-        m_restartMsgBox->titleWidget()->setFont(QFont("Josefin Sans Bold", 9));
-        m_restartMsgBox->textWidget()->setFont(QFont("Josefin Sans", 9));
-        m_restartMsgBox->setButtonFont(QFont("Josefin Sans", 9));
+        m_restartMsgBox->titleWidget()->setFont(QFont(APP_FONT_BOLD, 9));
+        m_restartMsgBox->textWidget()->setFont(QFont(APP_FONT, 9));
+        m_restartMsgBox->setButtonFont(QFont(APP_FONT, 9));
     }
     connect(m_restartMsgBox, &FHMessageBox::firstButtonClicked, this, [=]() {
         m_restartMsgBox->close(); // safe?

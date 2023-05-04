@@ -245,7 +245,7 @@ QWidget* PreferencesWindow::createGeneralPage() {
     // 1. set all labels to "Josefin Sans":
     for (int i = 0; i < m_generalPageLayout->rowCount(); i++) {
         auto _lbl = m_generalPageLayout->itemAt(i, QFormLayout::LabelRole)->widget();
-        _lbl->setFont(QFont("Josefin Sans", 9));
+        _lbl->setFont(QFont(APP_FONT, 9));
     }
     // 2. set all headers to "Bold":
     auto _head1 = m_generalPageLayout->itemAt(0, QFormLayout::LabelRole)->widget();

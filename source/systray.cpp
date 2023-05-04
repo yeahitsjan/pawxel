@@ -15,7 +15,7 @@ SysTray::SysTray(QColor _accentColor, bool _isDarkMode, QObject *parent) : m_acc
     if (!m_contextMenu)
         m_contextMenu = new QMenu;
     m_contextMenu->setPalette(PWX_appPalette(m_accentColor, m_isDarkMode));
-    m_contextMenu->setFont(QFont("Josefin Sans SemiBold", 9));
+    m_contextMenu->setFont(QFont(APP_FONT_MID, 9));
     {
         m_fullscreenCaptureAction = new QAction(tr("Fullscreen"), m_contextMenu);
         connect(m_fullscreenCaptureAction, &QAction::triggered, this, [=]() {
