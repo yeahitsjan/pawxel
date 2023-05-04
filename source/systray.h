@@ -32,9 +32,6 @@ private:
     QColor m_accentColor;
     bool m_isDarkMode;
 
-public slots:
-    void onCaptureFinished(); // just enable the context menu item
-
 signals:
     // User wants to create a fullscreen screenshot.
     void fullScreenCaptureRequested();

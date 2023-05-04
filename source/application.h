@@ -113,7 +113,6 @@ signals:
     
     // Signals related to restore the capture.
     void restore(QPixmap _pix);
-    void captureFinished(); // enables context menu item in SysTray
 };
 
 extern PawxelApp *PwxApp;

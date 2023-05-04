@@ -155,7 +155,6 @@ PawxelApp::PawxelApp(int &argc, char **argv) : SingleApplication(argc, argv) {
         connect(m_sysTray, &SysTray::preferencesWindowRequested, this, &PawxelApp::onPreferencesWindowRequested);
         connect(m_sysTray, &SysTray::aboutDialogRequested, this, &PawxelApp::onAboutWindowRequested);
         connect(m_sysTray, &SysTray::quitRequested, this, &PawxelApp::onQuitRequested);
-        connect(this, &PawxelApp::captureFinished, m_sysTray, &SysTray::onCaptureFinished);
         m_sysTray->show();
         this->setQuitOnLastWindowClosed(false);
         
@@ -209,7 +208,6 @@ void PawxelApp::onHoldLastCapture(QPixmap _pix) {
     }
     _captureFile.close();
     _pix = QPixmap();
-    emit captureFinished();
 }
 
 void PawxelApp::onRestoreCaptureRequested() {
@@ -217,6 +215,28 @@ void PawxelApp::onRestoreCaptureRequested() {
     if (!m_lastCapturePath.isEmpty()) {
         QPixmap _lastCapture = QPixmap(m_lastCapturePath);
         emit restore(_lastCapture);
+    }
+    QString _lastCapturePath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/__pwx_last__.png";
+    QFileInfo fi(_lastCapturePath);
+    if (fi.exists()) {
+        m_lastCapturePath = _lastCapturePath;
+        QPixmap _lastCapture = QPixmap(m_lastCapturePath);
+        emit restore(_lastCapture);
+    } else {
+        FHMessageBox *_noLastCapture = new FHMessageBox(FHMessageBox::Ok, m_accentColor, m_shouldAppsUseDarkMode);
+        _noLastCapture->setWindowTitle(tr("No last capture"));
+        _noLastCapture->setMessageBoxTitle(tr("No last capture"));
+        _noLastCapture->setText(tr("There is no recent capture saved. Take a screenshot first."));
+        _noLastCapture->setMessageBoxIcon(FHMessageBox::Information);
+        {
+            _noLastCapture->titleWidget()->setFont(QFont("Josefin Sans Bold", 9));
+            _noLastCapture->textWidget()->setFont(QFont("Josefin Sans", 9));
+            _noLastCapture->setButtonFont(QFont("Josefin Sans", 9));
+        }
+        connect(_noLastCapture, &FHMessageBox::firstButtonClicked, this, [=]() {
+            _noLastCapture->close();
+        }, Qt::UniqueConnection);
+        _noLastCapture->exec();
     }
 }
 

@@ -28,7 +28,6 @@ SysTray::SysTray(QColor _accentColor, bool _isDarkMode, QObject *parent) : m_acc
         });
 
         m_restoreCaptureAction = new QAction(tr("Restore last capture"));
-        m_restoreCaptureAction->setEnabled(false); // default, wait for first capture
         connect(m_restoreCaptureAction, &QAction::triggered, this, [=]() {
             emit restoreCaptureRequested();
         });
@@ -63,11 +62,6 @@ SysTray::SysTray(QColor _accentColor, bool _isDarkMode, QObject *parent) : m_acc
 }
 
 SysTray::~SysTray() {
-}
-
-void SysTray::onCaptureFinished() {
-    // Enable action after we are sure the user did a screenshot.
-    m_restoreCaptureAction->setEnabled(true);
 }
 
 } // namespace
