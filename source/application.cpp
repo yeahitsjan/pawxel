@@ -268,6 +268,11 @@ void PawxelApp::onSnipAreaRequested() {
     if (!m_previewWindow)
         m_previewWindow = new LittlePreviewWindow(m_autoSave, m_shouldAppsUseDarkMode);
     m_previewWindow->setObjectName("PreviewWindow");
+    // Always make sure the editor is not visible when requesting the snip area.
+    if (m_shotEditor) {
+        if (m_shotEditor->isVisible())
+            m_shotEditor->close();
+    }
     m_snipArea->show();
 }
 
