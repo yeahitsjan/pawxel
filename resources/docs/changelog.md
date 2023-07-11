@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.4
+
+![type](https://img.shields.io/badge/type-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/qt-5.14.2-blue?style=flat-square&logo=qt) ![qtver](https://img.shields.io/badge/qt-5.15.2-blue?style=flat-square&logo=qt)
+
+*tbd*
+
+:rocket: Features / Improvements:
+- Display indicator when multiple screens captured
+    - as requested in #12 (https://github.com/yeahitsjan/pawxel/issues/12)
+- Always restore capture
+    - The last capture is now safely stored even after a reboot
+    - This implementation also reduces memory usage as the image gets saved to the disk rather than hold in memory
+
+:bug: Bugfixes:
+- ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Fix preview window ignoring theme after retake
+- ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Fix segfault when editor is visible during snip area requested
+- ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Remove hardcoded fonts
+
 ## 0.1.3
 
 *13 April 2023*
