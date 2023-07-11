@@ -119,8 +119,8 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
 
         m_lActionBtns.append( m_retakeBtn = new QPushButton("\uf053", m_actionBar) );
         connect(m_retakeBtn, &QPushButton::clicked, this, [=]() {
-            this->close();
             emit retake();
+            this->hide();
         });
         m_actionBar->addWidget(m_retakeBtn);
 
