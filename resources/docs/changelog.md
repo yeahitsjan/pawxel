@@ -11,8 +11,8 @@
     - as requested in #12 (https://github.com/yeahitsjan/pawxel/issues/12)
 - Always restore capture
     - The last capture is now safely stored even after a reboot
-    - This implementation also reduces memory usage as the image gets saved to the disk rather than hold in memory
-
+    - Message Box appears if there is no recent capture available
+    
 :bug: Bugfixes:
 - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Fix preview window ignoring theme after retake
 - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Fix segfault when editor is visible during snip area requested
