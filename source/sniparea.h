@@ -28,6 +28,8 @@ protected:
     void mouseMoveEvent(QMouseEvent *ev) override;
     void paintEvent(QPaintEvent *ev) override;
 
+    void keyPressEvent(QKeyEvent *ev) override;
+
 private:
     QPoint m_mdPos;
     QPoint m_mcPos;
