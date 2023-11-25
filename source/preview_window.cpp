@@ -145,14 +145,26 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
 LittlePreviewWindow::~LittlePreviewWindow() {
 }
 
+// Preview Hotkeys
+// keycodes found on https://doc.qt.io/qt-5/qt.html#Key-enum
 void LittlePreviewWindow::keyPressEvent(QKeyEvent *ev) {
-    if (ev->modifiers() & Qt::ControlModifier) {
-        if (ev->key() == 0x043) {
+    if (ev->modifiers() & Qt::ControlModifier) { // detects Control Modifier
+        if (ev->key() == 0x043) { // detects c key
             if (!m_pix.isNull()) {
                 emit copyToClipboard(m_pix);
                 this->close();
             }
-        } else if (ev->key() == 0x053) {
+        }
+        else if (ev->key() == 0x045) { // detects "e" key
+            emit userWantsEdit(m_pix);
+        }
+        else if (ev->key() == 0x052) { // detects "r" key
+            if (!m_pix.isNull()) {
+                emit retake();
+                this->hide();
+            }
+        }
+        else if (ev->key() == 0x053) { // detects "s" key
             if (!m_pix.isNull()) {
                 if (m_autoSave && !PwxApp->preferences()->screenshotsFolder().startsWith("$EMPTY")) {
                     emit autoSaveToDisk(m_pix);
@@ -162,6 +174,16 @@ void LittlePreviewWindow::keyPressEvent(QKeyEvent *ev) {
                     this->close();
                 }
             }
+        }
+        else if (ev->key() == 0x057) { // detects "w" key
+            if (!m_pix.isNull()) {
+                this->close();
+            }
+        }
+    }
+    else if (ev->key() == 0x01000000) { // detects Escape key
+        if (!m_pix.isNull()) {
+            this->close();
         }
     }
 }
