@@ -8,7 +8,7 @@ Pawxel is copyright (c) 2023 by Jan Kowalewicz.
 <br><br>
 Licensed under the terms of the GNU GPLv3.
 <br><br>
-If you want you can <a href="https://www.buymeacoffee.com/pawxel">buy me a coffee</a>, help developing Pawxel and supporting aid agencies across the globe. You stumble upon any bugs? Report them <a href="https://github.com/yeahitsjan/pawxel/issues">here.</a>
+If you want, you can <a href="https://www.buymeacoffee.com/pawxel">buy me a coffee</a>, help develop <a href="https://github.com/yeahitsjan/pawxel">Pawxel</a>, or support aid agencies across the globe. Found a bug? Report them <a href="https://github.com/yeahitsjan/pawxel/issues">here.</a>
 </div>
 <br><br>
 Pawxel itself is open-source and uses a variety of open-source libraries. A huge thank you to:
