@@ -83,12 +83,14 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
     m_actionBar->setFixedHeight(32); // fixed height
     {   
         m_lActionBtns.append( m_editBtn = new QPushButton("\ue3c9", m_actionBar) );
+        m_editBtn->setToolTip(tr("Edit (Ctrl + E)"));
         connect(m_editBtn, &QPushButton::clicked, [=]() {
             emit userWantsEdit(m_pix);
         });
         m_actionBar->addWidget(m_editBtn);
 
         m_lActionBtns.append( m_copyBtn = new QPushButton("\ue173", m_actionBar) );
+        m_copyBtn->setToolTip(tr("Copy (Ctrl + C)"));
         connect(m_copyBtn, &QPushButton::clicked, this, [=]() {
             if (!m_pix.isNull()) {
                 LOG(INFO) << "Copied to clipboard.";
@@ -99,6 +101,7 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
         m_actionBar->addWidget(m_copyBtn);
 
         m_lActionBtns.append( m_saveBtn = new QPushButton("\ue161", m_actionBar) );
+        m_saveBtn->setToolTip(tr("Save (Ctrl + S)"));
         connect (m_saveBtn, &QPushButton::clicked, this, [=]() {
             if (!m_pix.isNull()) {
                 if (m_autoSave && !PwxApp->preferences()->screenshotsFolder().startsWith("$EMPTY")) {
@@ -118,6 +121,7 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
         m_actionBar->addWidget(_space);
 
         m_lActionBtns.append( m_retakeBtn = new QPushButton("\uf053", m_actionBar) );
+        m_retakeBtn->setToolTip(tr("Retake (Ctrl + R)"));
         connect(m_retakeBtn, &QPushButton::clicked, this, [=]() {
             emit retake();
             this->hide();
@@ -125,6 +129,7 @@ LittlePreviewWindow::LittlePreviewWindow(bool _autoSave, bool _isDarkMode, QWidg
         m_actionBar->addWidget(m_retakeBtn);
 
         m_lActionBtns.append( m_trashBtn = new QPushButton("\ue872", m_actionBar) );
+        m_trashBtn->setToolTip(tr("Delete (Ctrl + W)"));
         connect(m_trashBtn, &QPushButton::clicked, this, [=]() {
             // TODO: should we clear the pixmap?
             this->close();
