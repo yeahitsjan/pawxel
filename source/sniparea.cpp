@@ -38,11 +38,23 @@ void SnipArea::mousePressEvent(QMouseEvent *ev) {
     m_mouseDown = true;
 }
 
+void SnipArea::keyPressEvent(QKeyEvent *ev) { // TODO: make Escape key work when mouse isn't held down
+    if (ev->key() == 0x01000000) { // detects Escape key
+        m_mouseDown = false;
+        this->close();
+    }
+}
+
 void SnipArea::mouseReleaseEvent(QMouseEvent *ev) {
     if (ev->button() != Qt::LeftButton) return;
     m_mouseDown = false;
-    this->hide();
-    this->grab(m_capArea, QPoint(ev->pos().x(), ev->pos().y()));
+    if ((m_capArea.size().width() * m_capArea.size().height()) > 1) { // Ensures that something is being snipped
+        this->hide();
+        this->grab(m_capArea, QPoint(ev->pos().x(), ev->pos().y()));
+    }
+    else { // Cancels if tool is merely clicked
+        this->close();
+    }
 }
 
 void SnipArea::mouseMoveEvent(QMouseEvent *ev) {
