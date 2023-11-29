@@ -12,6 +12,13 @@
 - Always restore capture
     - The last capture is now safely stored even after a reboot
     - Message Box appears if there is no recent capture available
+- New preview window shortcuts (thanks to @paipeng05)
+    - `Ctrl+R`: retake screenshot
+    - `Ctrl+E`: launch editor
+    - `Ctrl+W`: close preview window
+    - `Esc`: close preview window
+    - Also, all buttons inside the preview window now got a tooltip with their corresponding shortcut!
+- While Snipping, you can now exit the Snip area by pressing either Esc or if you left click without dragging (thanks to @paipeng05)
     
 :bug: Bugfixes:
 - ![platform](https://img.shields.io/badge/-windows-darkblue?style=flat-square&logo=windows) ![platform](https://img.shields.io/badge/-linux-black?style=flat-square&logo=linux) Fix preview window ignoring theme after retake
