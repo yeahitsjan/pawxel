@@ -4,7 +4,7 @@
 
 ![type](https://img.shields.io/badge/type-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/qt-5.14.2-blue?style=flat-square&logo=qt) ![qtver](https://img.shields.io/badge/qt-5.15.2-blue?style=flat-square&logo=qt)
 
-*tbd*
+*29 November 2023*
 
 :rocket: Features / Improvements:
 - Display indicator when multiple screens captured

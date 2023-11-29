@@ -13,7 +13,7 @@
 #include <QOpenGLContext>
 #include <QOffscreenSurface>
 
-#define PAWXEL_VERSION "0.1.3"
+#define PAWXEL_VERSION "0.1.4"
 
 // Change based on rel type:
 //#define PWX_REL
