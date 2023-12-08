@@ -38,6 +38,9 @@ public:
     void setSaveFileFormat(int _i);
     int saveFileFormat() { return m_saveFileFormat; }
 
+    void setScreenShotChoice(int _i);
+    int screenShotChoice() { return m_screenShotChoice; }
+
     void setAutostart(bool _b);
     bool autostartEnabled() { return m_autostart; }
 
@@ -78,6 +81,9 @@ protected:
     // 0 = PNG; 1 = auto
     int m_saveFileFormat;
 
+    // 0 = opens preview; 1 = opens editor
+    int m_screenShotChoice; //TODO: think of a better name
+
     // only available when startup mode 0
     bool m_autostart;
 
@@ -108,6 +114,7 @@ signals:
     void restartToApply();
     void screenshotsFolderChanged(QString _str);
     void saveFileFormatChanged(int _i);
+    void screenShotChoiceChanged(int _i);
     void autostartChanged(bool _b);
     void mouseZoomInvertChanged(bool _b);
     void editorAAChanged(bool _b);

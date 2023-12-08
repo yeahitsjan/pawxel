@@ -65,6 +65,7 @@ private:
 
     bool m_perfMode;
     bool m_autoSave;
+    int m_screenShotChoice;
 
     void savePix(const QString &_fullQualifiedPath, QPixmap _pix);
 
