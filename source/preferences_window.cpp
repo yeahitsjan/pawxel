@@ -16,7 +16,7 @@ PreferencesWindow::PreferencesWindow(QColor _accentColor, bool _isDarkMode, QWid
     // ---
     this->setFont(QFont(APP_FONT, APP_FONT_SIZE));
     this->setAttribute(Qt::WA_DeleteOnClose);
-    this->setFixedSize(QSize(385, 465));
+    this->setFixedSize(QSize(385, 475));
     this->setWindowTitle(tr("Preferences"));
     this->setPalette(PWX_appPalette(m_accentColor, m_isDarkMode));
 
