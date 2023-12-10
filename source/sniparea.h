@@ -37,7 +37,6 @@ private:
     QPoint m_mcPos;
     QRect m_capArea;
     bool m_mouseDown;
-    int m_screenShotChoice;
     QRect calcArea(QPoint _pA, QPoint _pB);
 
 signals:

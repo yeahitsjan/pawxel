@@ -283,8 +283,8 @@ void PawxelApp::onSnipAreaRequested() {
     if (!m_snipArea)
         m_snipArea = new SnipArea(m_parent);
 
-    m_screenShotChoice = (m_preferences->screenShotChoice());
-    if (m_screenShotChoice == 0) {
+    m_afterScreenshot = (m_preferences->afterScreenshot());
+    if (m_afterScreenshot == 0) {
         connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onPreviewWindowRequested, Qt::UniqueConnection);
         // Create the window already here (altough we don't show it), so related libraries
         // can be loaded earlier. Possible minimal decrease in startup time?
@@ -297,7 +297,7 @@ void PawxelApp::onSnipAreaRequested() {
                 m_shotEditor->close();
         }
     }
-    else if (m_screenShotChoice == 1) {
+    else if (m_afterScreenshot == 1) {
         connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
     }
     m_snipArea->show();
