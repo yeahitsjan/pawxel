@@ -284,21 +284,23 @@ void PawxelApp::onSnipAreaRequested() {
         m_snipArea = new SnipArea(m_parent);
 
     m_afterScreenshot = (m_preferences->afterScreenshot());
-    if (m_afterScreenshot == 0) {
-        connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onPreviewWindowRequested, Qt::UniqueConnection);
-        // Create the window already here (altough we don't show it), so related libraries
-        // can be loaded earlier. Possible minimal decrease in startup time?
-        if (!m_previewWindow)
-            m_previewWindow = new LittlePreviewWindow(m_autoSave, m_shouldAppsUseDarkMode);
-        m_previewWindow->setObjectName("PreviewWindow");
-        // Always make sure the editor is not visible when requesting the snip area.
-        if (m_shotEditor) {
-            if (m_shotEditor->isVisible())
-                m_shotEditor->close();
-        }
-    }
-    else if (m_afterScreenshot == 1) {
-        connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
+    switch (m_afterScreenshot) {
+        case 0: {
+            connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onPreviewWindowRequested, Qt::UniqueConnection);
+            // Create the window already here (altough we don't show it), so related libraries
+            // can be loaded earlier. Possible minimal decrease in startup time?
+            if (!m_previewWindow)
+                m_previewWindow = new LittlePreviewWindow(m_autoSave, m_shouldAppsUseDarkMode);
+            m_previewWindow->setObjectName("PreviewWindow");
+            // Always make sure the editor is not visible when requesting the snip area.
+            if (m_shotEditor) {
+                if (m_shotEditor->isVisible())
+                    m_shotEditor->close();
+            }
+        } break;
+        case 1: {
+            connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
+        } break;
     }
     m_snipArea->show();
 }
