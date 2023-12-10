@@ -301,6 +301,9 @@ void PawxelApp::onSnipAreaRequested() {
         case 1: {
             connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
         } break;
+        case 2: {
+            connect(m_snipArea, &SnipArea::snipped, this, &PawxelApp::copyPixToClipboard, Qt::UniqueConnection);
+        }
     }
     m_snipArea->show();
 }

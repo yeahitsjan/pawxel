@@ -81,7 +81,7 @@ protected:
     // 0 = PNG; 1 = auto
     int m_saveFileFormat;
 
-    // 0 = opens preview; 1 = opens editor
+    // 0 = opens preview; 1 = opens editor; 2 = copies screenshot
     int m_afterScreenshot;
 
     // only available when startup mode 0
