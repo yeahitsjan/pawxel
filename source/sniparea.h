@@ -5,11 +5,13 @@
 #include <QWidget>
 #include <QObject>
 
+
 #include <QPaintEvent>
 #include <QMouseEvent>
 
 #include <QPoint>
 #include <QRect>
+
 
 namespace pawxel {
 
@@ -19,9 +21,9 @@ public:
     SnipArea(QWidget *parent = nullptr);
     ~SnipArea();
 
+
     // Grabs the shot out of the given rect.
     void grab(QRect _rect, QPoint _mousePos);
-
 protected:
     void mousePressEvent(QMouseEvent *ev) override;
     void mouseReleaseEvent(QMouseEvent *ev) override;

@@ -177,6 +177,16 @@ QWidget* PreferencesWindow::createGeneralPage() {
         });
     }
     m_generalPageLayout->addRow(tr("Editor Background:"), m_editorBackgroundBox);
+    m_afterScreenshotBox = new QComboBox(m_generalPage);
+    {
+        QStringList _afterScreenshot = {"Open Preview", "Open Editor", "Copy Screenshot"};
+        m_afterScreenshotBox->addItems(_afterScreenshot);
+        m_afterScreenshotBox->setCurrentIndex(PwxApp->preferences()->afterScreenshot());
+        connect(m_afterScreenshotBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [=](int _i) {
+            PwxApp->preferences()->setAfterScreenshot(_i);
+        });
+    }
+    m_generalPageLayout->addRow(tr("After Screenshot:"), m_afterScreenshotBox);
     m_autostartBox = new QCheckBox(m_generalPage);
     {
         m_autostartBox->setFixedWidth(20);

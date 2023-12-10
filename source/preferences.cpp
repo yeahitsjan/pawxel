@@ -43,6 +43,7 @@ bool Preferences::flush() {
         m_editorBackground = this->getValue("editor_background").toInt();
         m_screenshotsFolder = this->getValue("screenshots_folder").toString();
         m_saveFileFormat = this->getValue("save_file_format").toInt();
+        m_afterScreenshot = this->getValue("after_screenshot").toInt();
         m_autostart = this->getValue("autostart").toBool();
         m_invertMouseZoom = this->getValue("invert_zoom").toBool();
         m_editorGLAcceleration = this->getValue("editor_gl_accel").toBool();
@@ -155,6 +156,14 @@ void Preferences::setSaveFileFormat(int _i) {
         LOG(DEBUG) << "Screenshots auto-save format changed to: " << m_saveFileFormat;
         this->flush();
         emit saveFileFormatChanged(_i);
+    }
+}
+
+void Preferences::setAfterScreenshot(int _i) {
+    if (this->write("after_screenshot", QVariant(_i).toString())) {
+        m_afterScreenshot = _i;
+        this->flush();
+        emit afterScreenshotChanged(_i);
     }
 }
 
