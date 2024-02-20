@@ -4,7 +4,7 @@
     }
 </style>
 <div align="center">
-Pawxel is copyright (c) 2023 by Jan Kowalewicz.
+Pawxel is copyright (c) 2024 by Jan Kowalewicz.
 <br><br>
 Licensed under the terms of the GNU GPLv3.
 <br><br>

@@ -1,4 +1,4 @@
-// Pawxel - Copyright (c) 2022 Jan Kowalewicz. All rights reserved.
+// Pawxel - Copyright (c) 2022-2024 Jan Kowalewicz. All rights reserved.
 // Contact: jan@nitroosit.de; jan.kowalewicz@web.de
 #pragma once
 
