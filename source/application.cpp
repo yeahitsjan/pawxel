@@ -247,6 +247,7 @@ void PawxelApp::onShotSelectionRequested(QList<QPixmap> _lPixs) {
     m_selectionWindow->setObjectName("PreviewWindow"); // same styling
     connect(this, &PawxelApp::feedSelectWindow, m_selectionWindow, &SelectWindow::onMultiPixmaps, Qt::UniqueConnection);
     connect(m_selectionWindow, &SelectWindow::userSelectedScreen, this, &PawxelApp::onShotEditorRequested, Qt::UniqueConnection);
+    connect(m_selectionWindow, &SelectWindow::holdLastCapture, this, &PawxelApp::onHoldLastCapture, Qt::UniqueConnection);
     m_selectionWindow->show();
     emit feedSelectWindow(_lPixs);
 }
@@ -274,6 +275,7 @@ void PawxelApp::onFullscreenShotRequested() {
         QRect _geom = this->desktop()->screenGeometry();
         QPixmap _pix = QPixmap::grabWindow(0, _geom.x(), _geom.y(), _geom.width(), _geom.height());
         emit fullScreenCaptureFinished(_pix);
+        this->onHoldLastCapture(_pix);
     }
     _lScreens.clear();
 }
@@ -282,6 +284,7 @@ void PawxelApp::onSnipAreaRequested() {
     LOG(DEBUG) << "(application:onSnipAreaRequested) SnipArea requested";
     if (!m_snipArea)
         m_snipArea = new SnipArea(m_parent);
+    connect(m_snipArea, &SnipArea::holdLastCapture, this, &PawxelApp::onHoldLastCapture, Qt::UniqueConnection);
 
     m_afterScreenshot = (m_preferences->afterScreenshot());
     switch (m_afterScreenshot) {
@@ -364,7 +367,6 @@ void PawxelApp::onShotEditorRequested(QPixmap _pix) {
     connect(m_shotEditor, &EditorWindow::copyToClipboard, this, &PawxelApp::copyPixToClipboard, Qt::UniqueConnection);
     connect(m_shotEditor, &EditorWindow::saveToDisk, this, &PawxelApp::savePixToDisk, Qt::UniqueConnection);
     connect(m_shotEditor, &EditorWindow::autoSaveToDisk, this, &PawxelApp::autoSavePixToDisk, Qt::UniqueConnection);
-    connect(m_shotEditor, &EditorWindow::holdLastCapture, this, &PawxelApp::onHoldLastCapture, Qt::UniqueConnection);
     connect(m_shotEditor, &EditorWindow::preferencesWindowRequested, this, &PawxelApp::onPreferencesWindowRequested, Qt::UniqueConnection);
     connect(m_shotEditor, &EditorWindow::aboutWindowRequested, this, &PawxelApp::onAboutWindowRequested, Qt::UniqueConnection);
     m_shotEditor->show();

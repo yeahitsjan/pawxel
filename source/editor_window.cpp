@@ -384,7 +384,6 @@ EditorWindow::~EditorWindow() {
 }
 
 void EditorWindow::closeEvent(QCloseEvent *ev) {
-    emit holdLastCapture(m_pix);
     emit clearViewportOnClose();
     FramelessMainWindow::closeEvent(ev);
 }

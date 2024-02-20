@@ -48,6 +48,7 @@ void SelectWindow::onMultiPixmaps(QList<QPixmap> _lPixs) {
         }
         connect(_btn, &QToolButton::clicked, [this, _pix] { 
             emit userSelectedScreen(_pix);
+            emit holdLastCapture(_pix);
             this->close();
         });
         m_windowLayout->addWidget(_btn);

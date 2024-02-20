@@ -33,6 +33,7 @@ public slots:
 
 signals:
     void userSelectedScreen(QPixmap _pix);
+    void holdLastCapture(QPixmap _pix);
 };
 
 } // namespace

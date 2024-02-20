@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0
+
+![type](https://img.shields.io/badge/type-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/qt-5.14.2-blue?style=flat-square&logo=qt) ![qtver](https://img.shields.io/badge/qt-5.15.2-blue?style=flat-square&logo=qt)
+
+*tbd*
+
+:bug: Bugfixes:
+- Restoring screenshot after it was taken rather than just when using the Editor (https://github.com/yeahitsjan/pawxel/issues/19)
+- Sped-up application close after writing big screenshot (https://github.com/yeahitsjan/pawxel/issues/13)
+
 ## 0.1.4
 
 ![type](https://img.shields.io/badge/type-beta-blueviolet?style=flat-square) ![qtver](https://img.shields.io/badge/qt-5.14.2-blue?style=flat-square&logo=qt) ![qtver](https://img.shields.io/badge/qt-5.15.2-blue?style=flat-square&logo=qt)

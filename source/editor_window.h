@@ -149,8 +149,6 @@ signals:
     // Send pixmap to determine image size.
     void sendToImageSizeWidget(QPixmap _pix);
 
-    // Send the last capture to the running application loop.
-    void holdLastCapture(QPixmap _pix);
     // The last capture is hold, elements from viewport removed.
     void clearViewportOnClose();
 

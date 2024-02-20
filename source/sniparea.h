@@ -21,7 +21,6 @@ public:
     SnipArea(QWidget *parent = nullptr);
     ~SnipArea();
 
-
     // Grabs the shot out of the given rect.
     void grab(QRect _rect, QPoint _mousePos);
 protected:
@@ -42,6 +41,8 @@ private:
 signals:
     // Emitted when the user finished snipping.
     void snipped(QPixmap _pix, QPoint _mousePos);
+    // Send the last capture to the application loop to save to disk.
+    void holdLastCapture(QPixmap _pix);
 };
 
 } // namespace
